@@ -1,2 +1,13 @@
-# algoritmos-C
-Algoritmos | Lógica de programação | Estrutura de Dados -> C
+# Lógica de Programação em linguagem C
+Lógica de programação e Algoritmos | Estrutura de Dados<br>
+
+<b> Conteúdos: </b>
+<li>Operadores lógicos
+<li>Estruturas condicionais
+<li>Estruturas de repetição
+<li>Vetores
+<li>Matrizes
+<li>Funções 
+<li>Pilhas
+<li>Filas
+
