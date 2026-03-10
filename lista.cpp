@@ -1,5 +1,5 @@
 /*
-	INACABADO
+	undone
 	Name: lista.cpp
 	Author: Igor
 	Date: 10/03/26 11:16
@@ -121,4 +121,5 @@ void exibirLista(no *lista){
 		}
 	}
 }
+
 
