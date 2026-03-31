@@ -2,45 +2,45 @@
 	Name: lista.cpp
 	Author: Igor
 	Date: 10/03/26 11:16
-	Description: Implementação de lista encadeada
+	Description: ImplementaÃ§Ã£o de lista encadeada
 */
 
-//Importação de bibliotecas
+//ImportaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <conio.h>
 #include <windows.h>
 #include <stdlib.h>
 #include <locale.h>
 
-//Definição da estrutura de um Nó
+//DefiniÃ§Ã£o da estrutura de um NÃ³
 typedef struct no{
 	char nome[20];
 	int idade;
 	no *prox;
 };
 
-//Variável Global
+//VariÃ¡vel Global
 int tamanho; //Tamanho da lista
 
-//Seção de Prototipação
+//SeÃ§Ã£o de PrototipaÃ§Ã£o
 int vazia(no *);
-no *alocaMemoria(); //Alocar memória para um nó
-void insereFim(no *); //Insere um nó no fim da lista
-no *retiraFim(no *); //Retira um nó do fim da lista
-void insereInicio(no *); //Insere um nó no início da lista
-no *retiraInicio(no *); //Retira um nó do início da lista
+no *alocaMemoria(); //Alocar memÃ³ria para um nÃ³
+void insereFim(no *); //Insere um nÃ³ no fim da lista
+no *retiraFim(no *); //Retira um nÃ³ do fim da lista
+void insereInicio(no *); //Insere um nÃ³ no inÃ­cio da lista
+no *retiraInicio(no *); //Retira um nÃ³ do inÃ­cio da lista
 void exibirLista(no *);
 void iniciarLista(no *);
 int menu();
-void tratarOpcao(no *, int); //Toma decisão a partir da escolha do usuário
+void tratarOpcao(no *, int); //Toma decisÃ£o a partir da escolha do usuÃ¡rio
 
-//Função principal
+//FunÃ§Ã£o principal
 main(){
 	setlocale(LC_ALL, "Portuguese");
 	
 	no *lista = (no *) malloc(sizeof(no));
 	if(!lista){
-		puts("Sem memória para criar a lista!");
+		puts("Sem memÃ³ria para criar a lista!");
 		exit(1);
 	}else{
 		int opc = 0;
@@ -54,25 +54,25 @@ main(){
 
 }
 
-//Função para apresentar um menu ao usuário
+//FunÃ§Ã£o para apresentar um menu ao usuÃ¡rio
 int menu(){
 	int opc;
-	puts("Escolha sua opção: ");
+	puts("Escolha sua opÃ§Ã£o: ");
 	puts("_________________________________________");
 	printf("1 - Iniciar a lista                      |\n");
 	printf("2 - Exibir a lista                       |\n");
 	printf("3 - Inserir um elemento no fim da lista  |\n");
-	printf("4 - Inserir elemento no início da lista  |\n");
+	printf("4 - Inserir elemento no inÃ­cio da lista  |\n");
 	printf("5 - Excluir um elemento do fim da lista  |\n");
-	printf("6 - Excluir elemento do início da lista  |\n");
+	printf("6 - Excluir elemento do inÃ­cio da lista  |\n");
 	printf("7 - Sair                                 |\n");
 	puts("_________________________________________");
 	
-	printf("Opção: ");scanf("%d", &opc);
+	printf("OpÃ§Ã£o: ");scanf("%d", &opc);
 	return opc;
 }
 
-//Função para tratar a escolha da opção do menu
+//FunÃ§Ã£o para tratar a escolha da opÃ§Ã£o do menu
 void tratarOpcao(no *lista, int opc){
 	
 	no *tmp;
@@ -99,31 +99,31 @@ void tratarOpcao(no *lista, int opc){
 		case 7:
 			exit (0);
 		default:
-			puts("Opção Inválida");
+			puts("OpÃ§Ã£o InvÃ¡lida");
 			break;
 	}
 }
 
-//Função para iniciar a lista
+//FunÃ§Ã£o para iniciar a lista
 void iniciarLista(no *lista){
 	lista->prox = NULL;
 	tamanho = 0;
 }
 
-//Função que testa se a lista está vazia
+//FunÃ§Ã£o que testa se a lista estÃ¡ vazia
 int vazia(no *lista){
 	if(lista->prox == NULL){
-		return 1; //Está vazia
+		return 1; //EstÃ¡ vazia
 	}else{
-		return 0; //Não está vazia
+		return 0; //NÃ£o estÃ¡ vazia
 	}
 }
 
-//Função para alocação de memória para um nó
+//FunÃ§Ã£o para alocaÃ§Ã£o de memÃ³ria para um nÃ³
 no *alocaMemoria(){
 	no *novo = (no *) malloc(sizeof(no)); //Malloc: Memory allocation
 	if(!novo){
-		puts("Sem memória disponível para criar um novo nó.");
+		puts("Sem memÃ³ria disponÃ­vel para criar um novo nÃ³.");
 		exit(1);
 	}else{
 		printf("Nome: ");
@@ -134,18 +134,18 @@ no *alocaMemoria(){
 	}
 }
 
-//Função para inserir um nó no início da lista
+//FunÃ§Ã£o para inserir um nÃ³ no inÃ­cio da lista
 void insereInicio(no *lista){
 	
 	no *novo = alocaMemoria();
 	no *head = lista->prox;
 	lista->prox = novo;
 	novo->prox = head;
-	puts("Nó inserido no início da lista!");
+	puts("NÃ³ inserido no inÃ­cio da lista!");
 	tamanho++;
 }
 
-//Função para inserir um nó no fim a lista
+//FunÃ§Ã£o para inserir um nÃ³ no fim a lista
 void insereFim(no *lista){
 	no *novo = alocaMemoria();
 	novo->prox = NULL;
@@ -162,11 +162,11 @@ void insereFim(no *lista){
 	puts("Novo elemento inserido com sucesso!");
 }
 
-//Função para excluir um elemento do início da lista
+//FunÃ§Ã£o para excluir um elemento do inÃ­cio da lista
 no *retiraInicio(no *lista){
 	
 	if(lista->prox == NULL){
-		puts("\nA lista está vazia!");
+		puts("\nA lista estÃ¡ vazia!");
 		return NULL;
 	}else{
 		no *temp = lista->prox;
@@ -176,10 +176,10 @@ no *retiraInicio(no *lista){
 	}
 }
 
-//Função para excluir um elemento do fim da lista
+//FunÃ§Ã£o para excluir um elemento do fim da lista
 no *retiraFim(no *lista){
 	if(lista->prox == NULL){
-		puts("\nA lista está vazia!");
+		puts("\nA lista estÃ¡ vazia!");
 		return NULL;
 	}else{
 		no *ultimo = lista->prox;
@@ -189,13 +189,13 @@ no *retiraFim(no *lista){
 			ultimo = ultimo->prox;
 		}
 		penultimo->prox = NULL;
-		puts("Nó excluído com sucesso!");
+		puts("NÃ³ excluÃ­do com sucesso!");
 		tamanho--;
 		return ultimo;
 	}
 }
 
-//Função para exibir todo o conteúdo da Lista
+//FunÃ§Ã£o para exibir todo o conteÃºdo da Lista
 void exibirLista(no *lista){
 	
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //Cor original
