@@ -11,5 +11,6 @@ Lógica de programação e Algoritmos | Estrutura de Dados<br>
 <li>Funções 
 <li>Pilhas
 <li>Filas
-<li>Lista
+<li>Listas
+<li>Métodos de Ordenação
 
