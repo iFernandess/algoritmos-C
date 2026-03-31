@@ -2,23 +2,23 @@
 	Name: pilha.cpp
 	Author: Igor
 	Date: 03/03/26 10:56
-	Description: ImplementaÁ„o do conceito de pilha (LIFO - Last In First Out)
+	Description: Implementa√ß√£o do conceito de pilha (LIFO - Last In First Out)
 */
 
-//Sess„o de ImportaÁ„o
+//Sess√£o de Importa√ß√£o
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
-//PrototipaÁ„o
-void push(int); //FunÁ„o para inserir na pilha
-int pop(); //FunÁ„o para retirar da pilha
-int isFull(); //Testa se a pilha est· cheia
-int isEmpty(); //Testa se a pilha est· vazia
-void exibirPilha(); //Mostra todo o conte˙do da pilha
+//Prototipa√ß√£o
+void push(int); //Fun√ß√£o para inserir na pilha
+int pop(); //Fun√ß√£o para retirar da pilha
+int isFull(); //Testa se a pilha est√° cheia
+int isEmpty(); //Testa se a pilha est√° vazia
+void exibirPilha(); //Mostra todo o conte√∫do da pilha
 void menu();
 
-//Vari·veis globais
+//Vari√°veis globais
 int pilha[5];
 int topo = -1;
 
@@ -30,12 +30,12 @@ main(){
 	}
 }//Fim
 
-//FunÁ„o para apresentar o menu de opÁıes
+//Fun√ß√£o para apresentar o menu de op√ß√µes
 void menu(){
 	
 	system("cls");
 	int option = 0;
-	printf("Escolha uma opÁ„o:       |\n_________________________|\n==> 1 - Inserir elemento |\n==> 2 - Remover elemento |\n==> 3 - Exibir a Pilha   |\n==> 4 - Sair             |\n_________________________|\n");
+	printf("Escolha uma op√ß√£o:       |\n_________________________|\n==> 1 - Inserir elemento |\n==> 2 - Remover elemento |\n==> 3 - Exibir a Pilha   |\n==> 4 - Sair             |\n_________________________|\n");
 	scanf("%d", &option);
 	int elem;
 	
@@ -53,7 +53,7 @@ void menu(){
 				
 		case 4: exit(0);
 		
-		default: puts("OpÁ„o inv·lida.");
+		default: puts("Op√ß√£o inv√°lida.");
 	}
 	
 	system("pause");
