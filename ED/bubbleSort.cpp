@@ -2,17 +2,17 @@
 	Name: bubblesort.cpp
 	Author: Igor
 	Date: 24/03/26 11:01
-	Description: Programa para demonstrar o funcionamento do método de ordenação chamado Bubble Sort
+	Description: Programa para demonstrar o funcionamento do mÃ©todo de ordenaÃ§Ã£o chamado Bubble Sort
 */
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>
 #include <time.h>
 
-//Funções
+//FunÃ§Ãµes
 void bubbleSort(int *, int);
 
-//Variáveis globais
+//VariÃ¡veis globais
 int comp, trocas;
 
 main(){
@@ -40,17 +40,17 @@ main(){
 		printf(" %d |", vet[i]);
 	}
 	
-	printf("\n\nQuantidade de comparações: %d", comp);
+	printf("\n\nQuantidade de comparaÃ§Ãµes: %d", comp);
 	printf("\nQuantidade de trocas: %d", trocas);
 }
 
-//Função Bubble Sort
+//FunÃ§Ã£o Bubble Sort
 void bubbleSort(int *V, int tam){
 	
 	int i = 0;
 	int aux = 0;
 	
-	//Método de ordenação (Bubble Sort)
+	//MÃ©todo de ordenaÃ§Ã£o (Bubble Sort)
 	do{	
 		i = 0;
 		while(i < tam - 1){
