@@ -2,7 +2,7 @@
 	Name: selectionSort.cpp
 	Author: Igor
 	Date: 31/03/26 10:50
-	Description: Programa de implementação do algoritmo/método de ordenação Selection Sort
+	Description: Programa de implementaÃ§Ã£o do algoritmo/mÃ©todo de ordenaÃ§Ã£o Selection Sort
 */
 
 #include <stdio.h>
@@ -10,10 +10,10 @@
 #include <windows.h>
 #include <time.h>
 
-//Prototipação de Funções
+//PrototipaÃ§Ã£o de FunÃ§Ãµes
 void selectionSort(int *, int);
 
-//Variáveis Globais
+//VariÃ¡veis Globais
 int comp, trocas;
 
 
@@ -36,7 +36,7 @@ main(){
 		printf(" %d |", vet[i]);
 	}
 	
-	printf("\n\nQuantidade de comparações: %d", comp);
+	printf("\n\nQuantidade de comparaÃ§Ãµes: %d", comp);
 	printf("\nQuantidade de trocas: %d", trocas);
 	
 }//Fim do programa
@@ -45,22 +45,22 @@ void selectionSort(int *S, int tam){
 	int i, j, aux;
 	int chave, menor;
 	
-	//Laço externo que itera do início ao fim do vetor
+	//LaÃ§o externo que itera do inÃ­cio ao fim do vetor
 	for(i = 0; i < tam-1; i++){
 		
-		//Assume que o menor elemento está na primeira posição do vetor
+		//Assume que o menor elemento estÃ¡ na primeira posiÃ§Ã£o do vetor
 		chave = i; 
 		menor = i + 1;
 		
-		//Laço interno para localizar quem é o menor elemento do subconjunto
+		//LaÃ§o interno para localizar quem Ã© o menor elemento do subconjunto
 		for(j = i + 1; j < tam; j++){
 			if(S[j] < S[menor]){
-				menor = j; //Guarda o índice do menor elemento do subconjunto
+				menor = j; //Guarda o Ã­ndice do menor elemento do subconjunto
 			}
 			comp++;
 		}
 		
-		//Troca o menor elemento encontrado pelo elemento que está na chave (posição inicial)
+		//Troca o menor elemento encontrado pelo elemento que estÃ¡ na chave (posiÃ§Ã£o inicial)
 		if(S[menor] < S[chave]){
 			aux = S[chave];
 			S[chave] = S[menor];
