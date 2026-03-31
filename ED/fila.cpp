@@ -7,16 +7,16 @@
 
 #include <stdio.h>
 
-//Vari·veis Globais
+//Vari√°veis Globais
 int itens[5];
 int inicio = -1, fim = -1;
 int total = 5;
 
-//PrototipaÁ„o das funÁıes
+//Prototipa√ß√£o das fun√ß√µes
 void Enqueue(int); //Inserir elemento;
 int Dequeue(); //Retira elemento da fila;
-int isFull(); //Testa se a fila est· cheia (retorna 1)
-int isEmpty(); //Testa se a fila est· vazia (retorna 0)
+int isFull(); //Testa se a fila est√° cheia (retorna 1)
+int isEmpty(); //Testa se a fila est√° vazia (retorna 0)
 void imprimirFila();
 
 main(){
@@ -37,7 +37,7 @@ main(){
 	
 }//fim
 
-//FunÁ„o para inserir um elemento na fila
+//Fun√ß√£o para inserir um elemento na fila
 	void Enqueue(int elem){
 		if(isFull() == 1){
 			puts("\nA fila ta cheia!");
@@ -51,7 +51,7 @@ main(){
 		}
 	}
 	
-	//FunÁ„o para retirar um elemento da fila
+	//Fun√ß√£o para retirar um elemento da fila
 	int Dequeue(){
 		int elem;
 		if(isEmpty() == 1){
@@ -69,7 +69,7 @@ main(){
 		}
 	}
 	
-	//FunÁ„o que testa se a fila est· cheia
+	//Fun√ß√£o que testa se a fila est√° cheia
 	int isFull(){
 		if(inicio == ((fim + 1) % total) || (inicio == 0) && fim == total-1){
 			return 1;
@@ -78,7 +78,7 @@ main(){
 		}
 	}
 	
-	//FunÁ„o que testa se a fila est· vazia
+	//Fun√ß√£o que testa se a fila est√° vazia
 	int isEmpty(){
 		if(inicio == -1){
 			return 1;
@@ -87,7 +87,7 @@ main(){
 		}
 	}
 	
-	//FunÁ„o que exibe todos os elementos da fila
+	//Fun√ß√£o que exibe todos os elementos da fila
 	void imprimirFila(){
 		if(isEmpty() == 1){
 			puts("A fila ta vazia!");
