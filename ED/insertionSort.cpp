@@ -2,26 +2,26 @@
 	Name: insertionSort.cpp
 	Author: Igor
 	Date: 07/04/26 10:57
-	Description: Algoritmo de implementação do método de ordenação Insertin Sort
+	Description: Algoritmo de implementaÃ§Ã£o do mÃ©todo de ordenaÃ§Ã£o Insertin Sort
 */
 
 #include <stdio.h>
 #include <locale.h>
 #include <windows.h>
 
-//Prototipação de Funções
+//PrototipaÃ§Ã£o de FunÃ§Ãµes
 void insertionSort(int *, int);
 
-//Variáveis Globais
+//VariÃ¡veis Globais
 int comp, trocas;
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
 	
-	int vet[] = {17, 38, 12, 2, 44, 25, 19, -4, 30, 10,};
+	int vet[] = {17, 38, 12, 2, 44, 25, 19, -4, 30, 10};
 	int tam = sizeof(vet)/sizeof(int);
 	int i;
-	comp, trocas = 0;
+	comp = trocas = 0;
 	
 	puts("Vetor Original:");
 	for(int i = 0; i < tam; i++){
@@ -35,7 +35,7 @@ main(){
 		printf(" %d |", vet[i]);
 	}
 	
-	printf("\n\nQuantidade de comparações: %d", comp);
+	printf("\n\nQuantidade de comparaÃ§Ãµes: %d", comp);
 	printf("\nQuantidade de trocas: %d", trocas);
 }
 
@@ -49,7 +49,10 @@ void insertionSort(int *V, int tam){
 		while(j >= 0 && chave < V[j]){
 			V[j+1] = V[j];
 			j--;
+			trocas++;
+			comp++;
 		}
 		V[j+1] = chave;
+		trocas++;
 	}
 }
